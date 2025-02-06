@@ -1,7 +1,8 @@
+import { useState } from "react";
 
 
-// const decrementing = () => {
+const decrementing = () => {
 
-//     const [num, setNumber] = useState();
+    const [num, setNumber] = useState();
     
-// }
+}
