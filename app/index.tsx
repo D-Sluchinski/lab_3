@@ -1,20 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { View, Button } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-export default function Page() {
+const HomeScreen: React.FC = () => {
+  const navigation = useNavigation();
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View>
+      <Button title="Go to Lab 3" onPress={() => navigation.navigate('Lab3')} />
     </View>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default HomeScreen;
