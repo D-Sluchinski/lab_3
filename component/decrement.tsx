@@ -1,23 +1,20 @@
-<<<<<<< Updated upstream
-=======
 import React from 'react';
-import { Button } from 'react-native';
->>>>>>> Stashed changes
+import { Button, TouchableOpacity } from 'react-native';
 
-interface DecrementButtonProps {
-  onDecrement: () => void;
+type DecrementProps = {value: number; setValue: (value: number) => void};
+
+const Decrement: React.FC<DecrementProps> = ({value, setValue}) => {
+
+    const handleDecrement =() => {
+        setValue(value-1);
+    }
+
+
+  return (
+  <TouchableOpacity>
+    <Button title="Decrement" onPress={handleDecrement} />
+  </TouchableOpacity>
+  );
 }
 
-<<<<<<< Updated upstream
-// const decrementing = () => {
-
-//     const [num, setNumber] = useState();
-    
-// }
-=======
-const DecrementButton: React.FC<DecrementButtonProps> = ({ onDecrement }) => {
-  return <Button title="Decrement" onPress={onDecrement} />;
-};
-
-export default DecrementButton;
->>>>>>> Stashed changes
+export default Decrement;

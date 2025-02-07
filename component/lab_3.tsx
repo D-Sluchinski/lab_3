@@ -4,7 +4,7 @@ import IncrementButton from '../component/increment';
 import DecrementButton from '../component/decrement';
 
 const Lab3: React.FC = () => {
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState<number>(0);
 
   const increment = () => setCounter(prev => prev + 1);
   const decrement = () => setCounter(prev => prev - 1);
