@@ -5,7 +5,7 @@ type DecrementProps = { value: number; setValue: (value: number) => void };
 
 const Decrement: React.FC<DecrementProps> = ({ value, setValue }) => {
     const handleDecrement = () => {
-        setValue(value + 1);
+        setValue(value - 1);
     };
 
 
